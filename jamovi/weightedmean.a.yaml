@@ -1,7 +1,7 @@
 ---
 name:    weightedMean
 title:   Weighted Mean with Property Table
-menuGroup: SNPstats
+menuGroup: WeightedMean
 menuSubgroup: Prototype
 version: '0.1.0'
 jas: '1.2'

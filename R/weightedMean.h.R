@@ -12,7 +12,7 @@ weightedMeanOptions <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Clas
             tableOverrides = "", ...) {
 
             super$initialize(
-                package="SNPstats",
+                package="WeightedMean",
                 name="weightedMean",
                 requiresData=TRUE,
                 ...)
@@ -166,7 +166,7 @@ weightedMeanBase <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Class(
     public = list(
         initialize = function(options, data=NULL, datasetId="", analysisId="", revision=0) {
             super$initialize(
-                package = "SNPstats",
+                package = "WeightedMean",
                 name = "weightedMean",
                 version = c(0,1,0),
                 options = options,

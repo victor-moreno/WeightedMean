@@ -12,15 +12,15 @@ description: PoP of a weighted mean function for the jmv package.
 analyses:
   - title: Weighted Mean with Property Table
     name: weightedMean
-    ns: weightedMean
+    ns: WeightedMean
+    category: analyses
     menuGroup: WeightedMean
+    menuSubgroup: Prototype
     menuTitle: Weighted Mean with Property Table
-    menuSubgroup: weightedMean
     description: >
       Upload a CSV with variable weights (columns: Var, weightX, weightY,
       weightZ), select numeric variables from data, edit the property grid
       interactively, and compute weighted means per chosen weight dimension.
-    category: analyses
 usesNative: true
 minApp: 1.0.8
 

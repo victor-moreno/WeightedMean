@@ -1,3 +1,2 @@
 import(jmvcore)
 import(R6)
-export(weightedMean)
