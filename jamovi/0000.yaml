@@ -1,0 +1,27 @@
+---
+title: Injection proof of principle
+name: WeightedMean
+version: 0.1.0
+jms: '1.0'
+authors:
+  - Victor Moreno
+maintainer: Victor Moreno <v.moreno@iconcologa.net>
+date: '2026-04-21'
+type: R
+description: PoP of a weighted mean function for the jmv package.
+analyses:
+  - title: Weighted Mean with Property Table
+    name: weightedMean
+    ns: weightedMean
+    menuGroup: WeightedMean
+    menuTitle: Weighted Mean with Property Table
+    menuSubgroup: weightedMean
+    description: >
+      Upload a CSV with variable weights (columns: Var, weightX, weightY,
+      weightZ), select numeric variables from data, edit the property grid
+      interactively, and compute weighted means per chosen weight dimension.
+    category: analyses
+usesNative: true
+minApp: 1.0.8
+
+...

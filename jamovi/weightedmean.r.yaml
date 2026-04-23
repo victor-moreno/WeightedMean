@@ -1,0 +1,82 @@
+---
+name:    weightedMean
+title:   Weighted Mean with Property Table
+jrs:     '1.1'
+
+items:
+    - name:  matchInfo
+      title: Variable Matching
+      type:  Table
+      clearWith:
+        - vars
+        - propFile
+      columns:
+        - name:  variable
+          title: Variable
+          type:  text
+        - name:  matched
+          title: 'Matched in CSV'
+          type:  text
+        - name:  weightX
+          title: 'Weight X'
+          type:  number
+          format: zto,pvalue
+        - name:  weightY
+          title: 'Weight Y'
+          type:  number
+          format: zto,pvalue
+        - name:  weightZ
+          title: 'Weight Z'
+          type:  number
+          format: zto,pvalue
+
+    - name:  propTableWidget
+      title: Variable Properties (Editable)
+      type:  Html
+      clearWith:
+        - vars
+        - propFile
+
+    - name:  results
+      title: Weighted Mean Results
+      type:  Table
+      clearWith:
+        - vars
+        - propFile
+        - weightDim
+        - tableOverrides
+      columns:
+        - name:  variable
+          title: Variable
+          type:  text
+        - name:  mean
+          title: 'Unweighted Mean'
+          type:  number
+          format: zto,pvalue
+        - name:  weightUsed
+          title: 'Weight Used'
+          type:  number
+          format: zto,pvalue
+        - name:  weightedMean
+          title: 'Weighted Mean'
+          type:  number
+          format: zto,pvalue
+
+    - name:  overallResult
+      title: 'Overall Weighted Mean (All Variables)'
+      type:  Table
+      clearWith:
+        - vars
+        - propFile
+        - weightDim
+        - tableOverrides
+      columns:
+        - name:  dimension
+          title: Dimension
+          type:  text
+        - name:  overallWeightedMean
+          title: 'Overall Weighted Mean'
+          type:  number
+          format: zto,pvalue
+
+...

@@ -1,0 +1,66 @@
+---
+name:    weightedMean
+title:   Weighted Mean with Property Table
+menuGroup: SNPstats
+menuSubgroup: Prototype
+version: '0.1.0'
+jas: '1.2'
+
+description:
+    main: >
+        Upload a CSV with variable weights (columns: Var, weightX, weightY,
+        weightZ), select numeric variables from data, edit the property grid
+        interactively, and compute weighted means per chosen weight dimension.
+
+options:
+    - name: data
+      type: Data
+      description:
+          R: the data as a data frame
+
+    - name: vars
+      title: Variables
+      type: Variables
+      suggested:
+        - continuous
+      permitted:
+        - numeric
+      description:
+          R: numeric variables to include in the analysis
+
+    - name: propFile
+      title: Property Table (CSV path)
+      type: String
+      default: ''
+      description:
+          R: >
+              Full path to the CSV file containing variable properties.
+              Expected columns: Var, weightX, weightY, weightZ.
+
+    - name: weightDim
+      title: Weight Dimension
+      type: List
+      options:
+        - title: Weight X
+          name: weightX
+        - title: Weight Y
+          name: weightY
+        - title: Weight Z
+          name: weightZ
+      default: weightX
+      description:
+          R: which weight column to use for the weighted mean calculation
+
+    - name: tableOverrides
+      title: Table Overrides (JSON)
+      type: String
+      default: ''
+#      hidden: true
+      description:
+          R: >
+              JSON string storing user edits made in the interactive property
+              grid. Written by the results panel via postMessage and read by R
+              on each re-run to apply overrides before computation.
+
+
+...
