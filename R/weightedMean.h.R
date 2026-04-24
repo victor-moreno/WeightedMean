@@ -9,7 +9,7 @@ weightedMeanOptions <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Clas
             vars = NULL,
             propFile = "",
             weightDim = "weightX",
-            tableOverrides = "", ...) {
+            tableOverrides = "{}", ...) {
 
             super$initialize(
                 package="WeightedMean",
@@ -39,7 +39,7 @@ weightedMeanOptions <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Clas
             private$..tableOverrides <- jmvcore::OptionString$new(
                 "tableOverrides",
                 tableOverrides,
-                default="")
+                default="{}")
 
             self$.addOption(private$..vars)
             self$.addOption(private$..propFile)
@@ -216,7 +216,7 @@ weightedMean <- function(
     vars,
     propFile = "",
     weightDim = "weightX",
-    tableOverrides = "") {
+    tableOverrides = "{}") {
 
     if ( ! requireNamespace("jmvcore", quietly=TRUE))
         stop("weightedMean requires jmvcore to be installed (restart may be required)")

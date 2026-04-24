@@ -54,8 +54,7 @@ options:
     - name: tableOverrides
       title: Table Overrides (JSON)
       type: String
-      default: ''
-#      hidden: true
+      default: '{}'
       description:
           R: >
               JSON string storing user edits made in the interactive property
